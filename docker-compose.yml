@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    restart: always
+    image: mysql:8
+    volumes:
+      - /container-volumes/mysql:/var/lib/mysql
+    container_name: sms-mysql
+    hostname: sms-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=password
+  sms-mysql-backup:
+    image: mysql/backup
+    container_name: mysql-backup
+    hostname: mysql-backup
+    restart: always
+    build:
+      context: ./mysql-backup
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_HOST: mysql-db
+      MYSQL_USER: root
+      MYSQL_DATABASE: root
+      MYSQL_PWD: password
+      AWS_S3_URI: s3-uri
+      AWS_ACCESS_KEY_ID: s3-key-id
+      AWS_SECRET_ACCESS_KEY: s3-key-secret
+      AWS_DEFAULT_REGION: s3-region
+      AWS_OTHER_OPTIONS: option same: "--storage-class DEEP_ARCHIVE" (without "")
+    volumes:
+      - ./logs-backup:/var/log
+
