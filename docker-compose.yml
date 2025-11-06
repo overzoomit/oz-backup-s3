@@ -4,31 +4,73 @@ services:
   mysql-db:
     restart: always
     image: mysql:8
-    volumes:
-      - /container-volumes/mysql:/var/lib/mysql
-    container_name: sms-mysql
-    hostname: sms-mysql
+    container_name: mysql-db
+    hostname: mysql-db
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=password
-  sms-mysql-backup:
-    image: mysql/backup
-    container_name: mysql-backup
-    hostname: mysql-backup
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=test-backup
+  mongo-db:
+    restart: always
+    image: mongo:4.2
+    container_name: mongo-db
+    hostname: mongo-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: test-backup
+  postgres-db:
+    image: postgres:16
+    container_name: postgres-db
+    hostname: postgres-db
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - TZ=Europe/Rome
+      - PGPASSWORD=pass
+  backup-s3:
+    image: overzoomit/backup/s3
+    container_name: backup-s3
+    hostname: backup-s3
     restart: always
     build:
-      context: ./mysql-backup
+      context: ./backup-s3
       dockerfile: Dockerfile
+      args: # Per selezionare versioni custom di postgres e mongo ( per mongo fuinziona bene la 76.0 anche per versioni più vecchie come la 4 )
+        #  Entrambi opzionali, qual'ora non veniossero valorizzati viene "saltata" l'installazione degli stessi attraversp il Dockerfile
+        PG_VERSION: 16
+        MONGO_VERSION: 7.0
     environment:
+      # MYSQL
+      ENABLE_MYSQL_BACKUP: "yes"
       MYSQL_HOST: mysql-db
+      MYSQL_PORT: 3306  # default 3306
       MYSQL_USER: root
-      MYSQL_DATABASE: root
       MYSQL_PWD: password
-      AWS_S3_URI: s3-uri
+      MYSQL_DATABASE: test-backup
+      AWS_S3_MYSQL_BACKUP_URI: s3-uri
+      # POSTGRES
+      ENABLE_PG_BACKUP: "yes"
+      PGHOST: postgres-db
+      PGPORT: 5432 # default 5432
+      PGUSER: root
+      PGPASSWORD: password
+      PGDATABASE: postgres
+      AWS_S3_PG_BACKUP_URI: s3-uri
+      # MONGO
+      ENABLE_MONGO_BACKUP: "yes"
+      MONGO_HOST: mongo-db
+      MONGO_PORT: 27017 # default 27017
+      # username e psw sono facoltativi, dipende dalla propria configurazione mongo
+      MONGO_USER:
+      MONGO_PASSWORD:
+      MONGO_DATABASE: test-backup
+      AWS_S3_MONGO_BACKUP_URI: s3-uri
+      # Aws
       AWS_ACCESS_KEY_ID: s3-key-id
       AWS_SECRET_ACCESS_KEY: s3-key-secret
       AWS_DEFAULT_REGION: s3-region
-      AWS_OTHER_OPTIONS: option same: "--storage-class DEEP_ARCHIVE and --progress-frequency 60" (without "")
+      AWS_OTHER_OPTIONS: 'option same: "--storage-class DEEP_ARCHIVE and --progress-frequency 60" (without "")'
     volumes:
-      - ./mysql-backup/logs:/var/log
-
+      - ./backup-s3/logs:/var/log

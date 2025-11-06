@@ -1,0 +1,568 @@
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 10:57:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 10:57:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 10:57:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 10:57:01] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 2003: Can't connect to MySQL server on 'mysql-db:3306' (111) when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 10:58:02[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 10:58:02] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 10:58:02] Inizio mysqldump del database 'test-backup' da host 'mysql'... [0m
+[0;31m❌ [2025-11-06 10:58:02] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 2003: Can't connect to MySQL server on 'mysql:3306' (111) when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 10:59:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 10:59:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 10:59:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 10:59:02] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 2003: Can't connect to MySQL server on 'mysql-db:3306' (111) when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:00:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:00:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:00:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 11:00:01] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 2003: Can't connect to MySQL server on 'mysql-db:3306' (111) when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:02:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:02:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:02:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 11:02:01] ✅ SUCCESSO: Dump completato: dump_20251106-110201.sql [0m
+[0;34m🚀 [2025-11-06 11:02:01] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 11:02:02] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 11:02:02] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:03:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:03:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:03:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 11:03:01] ✅ SUCCESSO: Dump completato: dump_20251106-110301.sql [0m
+[0;34m🚀 [2025-11-06 11:03:01] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 11:03:02] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 11:03:02] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:10:31[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:10:31] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:10:31] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 11:10:31] ✅ SUCCESSO: Dump completato: dump_20251106-111031.sql [0m
+[0;34m🚀 [2025-11-06 11:10:31] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 11:10:32] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 11:10:32] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:19:39[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:19:39] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:19:39] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 11:19:40] ✅ SUCCESSO: Dump completato: dump_20251106-111939.sql [0m
+[0;34m🚀 [2025-11-06 11:19:40] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 11:19:41] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 11:19:41] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 11:41:44[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 11:41:44] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 11:41:44] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 11:41:44] ERRORE: pg_dump fallito! Dettagli: [0m
+pg_dump: error: server version: 18.0 (Debian 18.0-1.pgdg13+3); pg_dump version: 13.22
+pg_dump: error: aborting because of server version mismatch
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:02:12[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:02:12] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:02:12] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:02:12] ✅ SUCCESSO: Dump completato: dump_20251106-130212.dump [0m
+[0;34m🚀 [2025-11-06 13:02:12] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:02:14] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:02:14] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:28:36[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:28:36] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:28:36] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:28:37] ✅ SUCCESSO: Dump completato: dump_20251106-132836.sql [0m
+[0;34m🚀 [2025-11-06 13:28:37] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:28:38] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:28:38] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:28:38[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:28:38] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:28:38] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:28:38] ✅ SUCCESSO: Dump completato: dump_20251106-132838.dump [0m
+[0;34m🚀 [2025-11-06 13:28:38] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:28:39] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:28:39] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:29:55[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:29:55] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:29:55] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:29:55] ✅ SUCCESSO: Dump completato: dump_20251106-132955.sql [0m
+[0;34m🚀 [2025-11-06 13:29:55] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:29:56] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:29:56] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:29:56[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:29:56] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:29:56] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:29:56] ✅ SUCCESSO: Dump completato: dump_20251106-132956.dump [0m
+[0;34m🚀 [2025-11-06 13:29:56] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:29:57] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:29:57] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:31:29[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:31:29] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:31:29] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 13:31:29] ERRORE: pg_dump fallito! Dettagli: [0m
+pg_dump: error: connection to server at "0.0.0.0", port 6432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:32:10[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:32:10] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:32:10] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 13:32:10] ERRORE: pg_dump fallito! Dettagli: [0m
+pg_dump: error: connection to server at "192.168.250.1", port 6432 failed: FATAL:  password authentication failed for user "carmine"
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:34:08[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:34:08] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:34:08] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:34:09] ✅ SUCCESSO: Dump completato: dump_20251106-133408.dump [0m
+[0;34m🚀 [2025-11-06 13:34:09] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:34:10] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:34:10] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:37:14[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:37:14] 
+ Avvio backup Postgres → S3...
+ [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:39:59[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:39:59] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:39:59] Inizio mysqldump del database 'gipso' da host '192.168.250.1'... [0m
+[0;32m✅ [2025-11-06 13:39:59] ✅ SUCCESSO: Dump completato: dump_20251106-133959.dump [0m
+[0;34m🚀 [2025-11-06 13:39:59] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:40:01] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:40:01] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:42:01[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:42:01] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:42:01] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:42:01] ✅ SUCCESSO: Dump completato: dump_20251106-134201.sql [0m
+[0;34m🚀 [2025-11-06 13:42:01] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:42:03] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:42:03] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:42:03[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:42:03] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:42:03] Inizio mysqldump del database 'gipso' da host '192.168.250.1'... [0m
+[0;32m✅ [2025-11-06 13:42:03] ✅ SUCCESSO: Dump completato: dump_20251106-134203.dump [0m
+[0;34m🚀 [2025-11-06 13:42:03] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:42:04] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:42:04] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:43:28[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:43:28] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:43:28] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:43:29] ✅ SUCCESSO: Dump completato: dump_20251106-134328.sql [0m
+[0;34m🚀 [2025-11-06 13:43:29] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:43:30] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:43:30] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:44:03[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:44:03] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:44:03] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:44:03] ✅ SUCCESSO: Dump completato: dump_20251106-134403.sql [0m
+[0;34m🚀 [2025-11-06 13:44:03] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:44:04] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:44:04] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:46:29[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:46:29] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:46:29] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:46:30] ✅ SUCCESSO: Dump completato: dump_20251106-134629.sql [0m
+[0;34m🚀 [2025-11-06 13:46:30] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:46:31] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:46:31] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:46:31[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:46:31] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:46:31] Inizio mysqldump del database 'postgres' da host 'postgres-db'... [0m
+[0;32m✅ [2025-11-06 13:46:31] ✅ SUCCESSO: Dump completato: dump_20251106-134631.dump [0m
+[0;34m🚀 [2025-11-06 13:46:31] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:46:32] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:46:32] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:47:26[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:47:26] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:47:26] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 13:48:42] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1045: "Access denied for user 'root'@'172.19.0.3' (using password: NO)" when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:49:11[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:49:11] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:49:11] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 13:49:11] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 2002: "Can't connect to server on 'mysql-db' (115)" when trying to connect
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:50:02[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:50:02] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:50:02] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 13:50:03] ✅ SUCCESSO: Dump completato: dump_20251106-135002.sql [0m
+[0;34m🚀 [2025-11-06 13:50:03] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:50:04] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:50:04] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 13:50:04[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 13:50:04] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 13:50:04] Inizio mysqldump del database 'postgres' da host 'postgres-db'... [0m
+[0;32m✅ [2025-11-06 13:50:04] ✅ SUCCESSO: Dump completato: dump_20251106-135004.dump [0m
+[0;34m🚀 [2025-11-06 13:50:04] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 13:50:05] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 13:50:05] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 14:22:48[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 14:22:48] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 14:22:48] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 14:22:48] ✅ SUCCESSO: Dump completato: dump_20251106-142248.sql [0m
+[0;34m🚀 [2025-11-06 14:22:48] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 14:22:49] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 14:22:49] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 14:22:49[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 14:22:49] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 14:22:49] Inizio mysqldump del database 'postgres' da host 'postgres-db'... [0m
+[0;31m❌ [2025-11-06 14:22:49] ERRORE: pg_dump fallito! Dettagli: [0m
+pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.0 (Debian 18.0-1.pgdg13+3); pg_dump version: 16.10 (Debian 16.10-1.pgdg12+1)
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 14:24:18[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 14:24:18] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 14:24:18] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 14:24:18] ✅ SUCCESSO: Dump completato: dump_20251106-142418.sql [0m
+[0;34m🚀 [2025-11-06 14:24:18] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 14:24:19] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 14:24:19] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 14:24:19[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 14:24:19] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 14:24:19] Inizio mysqldump del database 'postgres' da host 'postgres-db'... [0m
+[0;32m✅ [2025-11-06 14:24:19] ✅ SUCCESSO: Dump completato: dump_20251106-142419.dump [0m
+[0;34m🚀 [2025-11-06 14:24:19] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 14:24:20] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 14:24:20] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:01:44[0m
+[1;33m============================================================[0m
+
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:04:13[0m
+[1;33m============================================================[0m
+
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:06:16[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:06:16] 
+ Avvio backup Mongo → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:06:16] Inizio mysqldump del database 'test-database' da host 'mongodb://mongo-db:27017/test-database'... [0m
+[0;32m✅ [2025-11-06 15:06:16] ✅ SUCCESSO: Dump completato: dump_mongo_20251106-150616.gz [0m
+[0;34m🚀 [2025-11-06 15:06:16] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 15:06:17] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 15:06:17] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:07:41[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:07:41] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:07:41] Inizio mysqldump del database 'test-backup' da host 'mysql-db'... [0m
+[0;32m✅ [2025-11-06 15:07:42] ✅ SUCCESSO: Dump completato: dump_20251106-150741.sql [0m
+[0;34m🚀 [2025-11-06 15:07:42] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 15:07:43] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 15:07:43] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:07:43[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:07:43] 
+ Avvio backup Postgres → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:07:43] Inizio mysqldump del database 'postgres' da host 'postgres-db'... [0m
+[0;32m✅ [2025-11-06 15:07:43] ✅ SUCCESSO: Dump completato: dump_20251106-150743.dump [0m
+[0;34m🚀 [2025-11-06 15:07:43] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 15:07:44] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 15:07:44] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:07:44[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:07:44] 
+ Avvio backup Mongo → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:07:44] Inizio mysqldump del database 'test-database' da host 'mongodb://mongo-db:27017/test-database'... [0m
+[0;32m✅ [2025-11-06 15:07:44] ✅ SUCCESSO: Dump completato: dump_mongo_20251106-150744.gz [0m
+[0;34m🚀 [2025-11-06 15:07:44] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 15:07:45] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 15:07:45] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:31:37[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:31:37] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:31:37] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:31:37] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:32:37[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:32:37] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:32:37] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:32:37] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:33:19[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:33:19] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:33:19] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:33:19] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:33:51[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:33:51] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:33:51] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:33:51] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:36:58[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:36:58] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:36:58] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:36:58] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:38:20[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:38:20] 
+ Avvio backup MySQL → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:38:20] Inizio mysqldump del database 'test-backup.' da host 'mysql-db'... [0m
+[0;31m❌ [2025-11-06 15:38:20] ERRORE: mysqldump fallito! Dettagli: [0m
+mysqldump: Got error: 1049: "Unknown database 'test-backup.'" when selecting the database
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:39:08[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:39:08] 
+ Avvio backup Mongo → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:39:08] Inizio mysqldump del database 'test-backup' da host 'mongodb://root:password@mongo-db:27017/test-backup?authSource=admin'... [0m
+[0;32m✅ [2025-11-06 15:39:08] ✅ SUCCESSO: Dump completato: dump_mongo_20251106-153908.gz [0m
+[0;34m🚀 [2025-11-06 15:39:08] Caricamento su S3 (s3://overzoom-backups/salvatore/sms/tests) [0m
+[0;32m✅ [2025-11-06 15:39:10] ✅ SUCCESSO: Upload completato su S3. [0m
+[0;32m✅ [2025-11-06 15:39:10] ✅ SUCCESSO: Backup completato con successo! [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:40:02[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:40:02] 
+ Avvio backup Mongo → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:40:02] Inizio mysqldump del database 'test-backup' da host 'mongodb://mongo-db:27017/test-backup'... [0m
+[0;31m❌ [2025-11-06 15:40:02] ERRORE: pg_dump fallito! Dettagli: URI: 'mongodb://mongo-db:27017/test-backup' [0m
+
+[1;33m============================================================[0m
+[1;33m🕒  Nuova esecuzione del backup - 2025-11-06 15:51:54[0m
+[1;33m============================================================[0m
+
+[0;34m🚀 [2025-11-06 15:51:54] 
+ Avvio backup Mongo → S3...
+ [0m
+[0;34m🚀 [2025-11-06 15:51:54] Inizio mysqldump del database 'test-backup' da host 'mongodb://mongo-db:27017/test-backup'... [0m
+[0;31m❌ [2025-11-06 15:51:54] ERRORE: mongodump fallito! Dettagli: URI: 'mongodb://mongo-db:27017/test-backup' [0m

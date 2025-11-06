@@ -28,12 +28,12 @@ chmod 0644 /etc/cron.d/backup-cron
 sed -i -e '$a\' /etc/cron.d/backup-cron
 
 crontab /etc/cron.d/backup-cron
-crond
+cron
 
 # Salva tutte le env Docker in /etc/environment per cron
-printenv | grep -E '^(AWS_|MYSQL_)' | while IFS='=' read -r name value; do
+printenv | grep -E '^(AWS_|MYSQL_|PG|ENABLE_|MONGO_)' | while IFS='=' read -r name value; do
   printf '%s="%s"\n' "$name" "$value"
 done > /etc/environment
 
-echo "Tail del log di cron..."
+echo "Tail del log dei backup"
 tail -F /var/log/backup.log
