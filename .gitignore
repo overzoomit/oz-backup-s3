@@ -1,3 +1,4 @@
 .idea
 /logs
 docker-compose.yml.local
+/backup-s3/logs
