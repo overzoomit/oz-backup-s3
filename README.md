@@ -224,7 +224,8 @@ backup-s3:
     AWS_OTHER_OPTIONS: 'option same: "--storage-class DEEP_ARCHIVE and --progress-frequency 60" (without "")'
 ```
 
-> ⚠️ La variabile "PGPORT" ha come valore di default: 5432
+> ⚠️ Informarsi sulla versione di postgres che ha l'istanza sul quale si vuole fare il backup. Modificare di conseguenza l'arg: "PG_VERSION". <br>
+> La variabile "PGPORT" ha come valore di default: 5432. <br>
 
 **Crontab personalizzato (`backup-s3/crontab.txt`):**
 
@@ -360,7 +361,7 @@ backup-s3:
 
 ### 🧱 Esempio 5 – Backup solo di MongoDB
 
-Esegue il backup esclusivamente del database MySQL ogni giorno alle 01:00, installando **solo il client `mongodump` versione7.0**:
+Esegue il backup esclusivamente del database MongoDB, attraverso **il client `mongodump` versione: 7.0**:
 
 ```yaml
 backup-s3:
@@ -386,7 +387,7 @@ backup-s3:
 
 > ⚠️ La versione 7.0 è versatile e in molti casi basta e avanza per fare backup di mongo anche con versioni "vecchie" come 4+. <br>
 > La variabile "MONGO_PORT" ha come valore di default: 27017. <br>
-> Le variabili "MONGO_USER" e "MONGO_PASSWORD, possono essere lasciati vuoti se l'istanza di mongo è stata configurata senza autenticazione.
+> Le variabili "MONGO_USER" e "MONGO_PASSWORD, possono essere lasciate vuoti se l'istanza di mongo è stata configurata senza autenticazione.
 ---
 
 ## 🧾 Log e troubleshooting
