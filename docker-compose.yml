@@ -39,8 +39,8 @@ services:
       dockerfile: Dockerfile
       args: # Per selezionare versioni custom di postgres e mongo ( per mongo fuinziona bene la 76.0 anche per versioni più vecchie come la 4 )
         #  Entrambi opzionali, qual'ora non veniossero valorizzati viene "saltata" l'installazione degli stessi attraversp il Dockerfile
-        PG_VERSION: 16
-        MONGO_VERSION: 7.0
+        PG_VERSION: ${PG_VERSION}
+        MONGO_VERSION: ${MONGO_VERSION}
     environment:
       # MYSQL
       ENABLE_MYSQL_BACKUP: "yes"

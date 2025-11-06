@@ -19,8 +19,8 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      PG_VERSION: 16
-      MONGO_VERSION: 7.0
+      PG_VERSION: ${PG_VERSION}
+      MONGO_VERSION: ${MONGO_VERSION}
   environment:
     # MYSQL
     ENABLE_MYSQL_BACKUP: "yes"
@@ -113,26 +113,44 @@ backup-s3:
 | **AWS_S3_MONGO_BACKUP_URI** | Percorso S3 dove salvare il dump MongoDB.            | `s3://my-bucket/mongo-backups/` |
 
 ---
-
 ## ⚙️ Argomenti di build (ARG)
 
-Nel blocco `build.args` del `docker-compose.yml` è possibile specificare versioni **personalizzate** dei client di backup per PostgreSQL e MongoDB:
+Nel blocco `build.args` del `docker-compose.yml`, le versioni dei client di backup per **PostgreSQL** e **MongoDB** vengono ora **lette direttamente dal file `.env`**, invece di essere definite manualmente nel file YAML:
 
 ```yaml
 args:
-  PG_VERSION: 16
-  MONGO_VERSION: 7.0
+  PG_VERSION: ${PG_VERSION}
+  MONGO_VERSION: ${MONGO_VERSION}
 ```
+
+> 💡 **Nota:** per MongoDB la versione `7.0` risulta compatibile anche con versioni precedenti (ad esempio la `4.x`).
+
+---
 
 ### 🔹 Funzionamento intelligente
 
-* Se **`PG_VERSION`** o **`MONGO_VERSION`** vengono specificati, il Dockerfile installerà **solo** i client corrispondenti (`pg_dump`, `mongodump`).
-* Se **non vengono valorizzati**, l’installazione di quei client viene **saltata automaticamente**, permettendo di creare un’immagine più leggera e veloce.
+* Se **`PG_VERSION`** o **`MONGO_VERSION`** sono valorizzati nel file `.env`, il `Dockerfile` installerà **solo** i client corrispondenti (`pg_dump`, `mongodump`).
+* Se **non vengono valorizzati**, l’installazione dei rispettivi client viene **saltata automaticamente**, consentendo di creare un’immagine più **leggera** e **veloce**.
 * È quindi possibile costruire immagini:
+    * **minimali** → solo MySQL
+    * **ibride** → ad esempio MySQL + MongoDB
+    * **complete** → tutti e tre i database supportati
 
-    * **minimali** (solo MySQL),
-    * **ibride** (ad esempio MySQL + MongoDB),
-    * oppure **complete** (tutti e tre i DB).
+---
+
+### 🧩 Esempi di file `.env`
+
+**Esempio con versioni personalizzate:**
+```bash
+PG_VERSION=16
+MONGO_VERSION=7.0
+```
+
+**Esempio senza valorizzazione (client non installati):**
+```bash
+PG_VERSION=
+MONGO_VERSION=
+```
 
 ---
 
@@ -208,7 +226,7 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      PG_VERSION: 16
+      PG_VERSION: ${PG_VERSION}
   environment:
     ENABLE_PG_BACKUP: "yes"
     PGHOST: postgres-db
@@ -245,7 +263,7 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      PG_VERSION: 16
+      PG_VERSION: ${PG_VERSION}
   environment:
     ENABLE_MYSQL_BACKUP: "yes"
     MYSQL_HOST: mysql-db
@@ -283,7 +301,7 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      MONGO_VERSION: 7.0
+      MONGO_VERSION: ${MONGO_VERSION}
   environment:
     ENABLE_MYSQL_BACKUP: "yes"
     MYSQL_HOST: mysql-db
@@ -323,8 +341,8 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      PG_VERSION: 16
-      MONGO_VERSION: 7.0
+      PG_VERSION: ${PG_VERSION}
+      MONGO_VERSION: ${MONGO_VERSION}
   environment:
     # MYSQL
     ENABLE_MYSQL_BACKUP: "yes"
@@ -369,7 +387,7 @@ backup-s3:
     context: ./backup-s3
     dockerfile: Dockerfile
     args:
-      MONGO_VERSION: 7.0
+      MONGO_VERSION: ${MONGO_VERSION}
   environment:
     ENABLE_MONGO_BACKUP: "yes"
     MONGO_HOST: mongo-db
