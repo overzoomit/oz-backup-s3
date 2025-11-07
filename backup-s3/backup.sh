@@ -169,13 +169,14 @@ mongoBackup() {
   : "${MONGO_PORT:=27017}"
   MONGO_USER="${MONGO_USER:-}" # Se non valorizzata mette stringa vuota
   MONGO_PASSWORD="${MONGO_PASSWORD:-}" # Se non valorizzata mette stringa vuota
+  MONGO_URI_CONNECTION_OPTIONS="${MONGO_URI_CONNECTION_OPTIONS:-}" # Se non valorizzata mette stringa vuota
 
   MONGO_URI=""
   # Se username e password sono impostati → usa autenticazione
   if [[ -n "$MONGO_USER" && -n "$MONGO_PASSWORD" ]]; then
-      MONGO_URI="mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}?authSource=admin"
+      MONGO_URI="mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}${MONGO_URI_CONNECTION_OPTIONS}"
   else
-      MONGO_URI="mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}?authSource=admin"
+      MONGO_URI="mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}${MONGO_URI_CONNECTION_OPTIONS}"
   fi
 
   log "\n Avvio backup Mongo → S3...\n"

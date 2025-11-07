@@ -65,6 +65,7 @@ services:
       # username e psw sono facoltativi, dipende dalla propria configurazione mongo
       MONGO_USER:
       MONGO_PASSWORD:
+      MONGO_URI_CONNECTION_OPTIONS: ?authSource=admin
       MONGO_DATABASE: test-backup
       AWS_S3_MONGO_BACKUP_URI: s3-uri
       # Aws

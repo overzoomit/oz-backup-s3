@@ -29,7 +29,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 
-# install mongotools
+# installa mongotools solo se MONGO_VERSION è impostato
 RUN if [ -n "${MONGO_VERSION}" ]; then \
     apt-get update && \
     apt-get install -y wget gnupg ca-certificates && \
@@ -42,7 +42,7 @@ RUN if [ -n "${MONGO_VERSION}" ]; then \
         echo "Skipping MongoDB installation because MONGO_VERSION is not set"; \
     fi
 
-# Install aws-cli
+# Installa aws-cli
 RUN apt-get update && \
     apt-get install -y --no-install-recommends awscli cron && \
     rm -rf /var/lib/apt/lists/*

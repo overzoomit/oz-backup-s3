@@ -101,16 +101,51 @@ backup-s3:
 ---
 
 ### 🔹 Backup MongoDB
+| Variabile                        | Descrizione                                                                                                                                                                                                                     | Esempio                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **ENABLE_MONGO_BACKUP**          | Abilita o disabilita il backup MongoDB (`yes`/`no`).                                                                                                                                                                            | `yes`                                           |
+| **MONGO_HOST**                   | Host o container MongoDB.                                                                                                                                                                                                       | `mongo-db`                                      |
+| **MONGO_PORT**                   | Porta del servizio MongoDB (default `27017`).                                                                                                                                                                                   | `27017`                                         |
+| **MONGO_USER**                   | Utente MongoDB (opzionale).                                                                                                                                                                                                     | `root`                                          |
+| **MONGO_PASSWORD**               | Password MongoDB (opzionale).                                                                                                                                                                                                   | `password`                                      |
+| **MONGO_DATABASE**               | Nome del database da esportare.                                                                                                                                                                                                 | `test-backup`                                   |
+| **MONGO_URI_CONNECTION_OPTIONS** | Opzioni di connessione aggiuntive per il connection string MongoDB (da apporre dopo `?`, es. `authSource=admin`). Permettono di specificare database di autenticazione o altri parametri come `retryWrites`, `replicaSet`, ecc. | `?authSource=admin&retryWrites=true&w=majority` |
+| **AWS_S3_MONGO_BACKUP_URI**      | Percorso S3 dove salvare il dump MongoDB.                                                                                                                                                                                       | `s3://my-bucket/mongo-backups/`                 |
 
-| Variabile                   | Descrizione                                          | Esempio                         |
-| --------------------------- | ---------------------------------------------------- | ------------------------------- |
-| **ENABLE_MONGO_BACKUP**     | Abilita o disabilita il backup MongoDB (`yes`/`no`). | `yes`                           |
-| **MONGO_HOST**              | Host o container MongoDB.                            | `mongo-db`                      |
-| **MONGO_PORT**              | Porta del servizio MongoDB (default `27017`).        | `27017`                         |
-| **MONGO_USER**              | Utente MongoDB (opzionale).                          | `root`                          |
-| **MONGO_PASSWORD**          | Password MongoDB (opzionale).                        | `password`                      |
-| **MONGO_DATABASE**          | Nome del database da esportare.                      | `test-backup`                   |
-| **AWS_S3_MONGO_BACKUP_URI** | Percorso S3 dove salvare il dump MongoDB.            | `s3://my-bucket/mongo-backups/` |
+![Warning](https://img.shields.io/badge/⚠️%20Attenzione-Formato%20obbligatorio-yellow)
+
+> ⚠️ **Attenzione – Formato obbligatorio**
+>
+> La variabile **`MONGO_URI_CONNECTION_OPTIONS`** **deve sempre iniziare con il carattere `?`**, che indica l’inizio dei parametri nella stringa di connessione MongoDB.
+>
+> 🔹 **Esempio corretto (un solo parametro):**
+> ```env
+> MONGO_URI_CONNECTION_OPTIONS=?authSource=admin
+> ```
+>
+> 🔸 **Esempio errato (manca `?`):**
+> ```env
+> MONGO_URI_CONNECTION_OPTIONS=authSource=admin
+> ```
+>
+> Senza il `?`, la connessione a MongoDB **fallirà** perché il driver interpreterà l’URI come non valido.
+>
+> ---
+>
+> ℹ️ **Informazioni aggiuntive**
+>
+> È possibile specificare **più opzioni di connessione** concatenandole con il simbolo `&`.  
+> Ogni coppia `chiave=valore` deve essere separata da `&` e tutti i parametri devono trovarsi **dopo il `?` iniziale**.
+>
+> 🔹 **Esempio con più parametri:**
+> ```env
+> MONGO_URI_CONNECTION_OPTIONS=?authSource=admin&retryWrites=true&w=majority
+> ```
+>
+> Questo esempio indica:
+> - `authSource=admin`: usa il database `admin` per l’autenticazione
+> - `retryWrites=true`: abilita il retry automatico delle scritture
+> - `w=majority`: richiede conferma della scrittura dalla maggioranza dei nodi
 
 ---
 ## ⚙️ Argomenti di build (ARG)
